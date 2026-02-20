@@ -4,3 +4,5 @@ The RandomForestClassifier make predictions based on fastf1 API data ( saved to 
 
 Installation:
 pip install -r requirements.txt
+
+If you want to learn how to buil your own models - join my Machine Learning Platform - https://ml-platform.tech
