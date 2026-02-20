@@ -4,15 +4,10 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report, roc_auc_score
 from sklearn.preprocessing import LabelEncoder
-import logging
-
-logging.getLogger("fastf1").setLevel(logging.ERROR)
 
 np.random.seed(42)
 
 df = pd.read_csv("f1_data.csv")
-
-df["constructor_ponts"] = df.groupby("team")["driver_points"].transform("cumsum")
 
 FEATURES = [
     "grid_position",
@@ -52,6 +47,7 @@ model = RandomForestClassifier(
 )
 
 model.fit(X_train, y_train)
+
 
 print("Training complete")
 
